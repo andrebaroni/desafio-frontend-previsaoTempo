@@ -1,0 +1,12 @@
+.MuiPaper-root-2{
+    width: 300px;
+    display: flex;
+}
+
+.content{
+    font-size: 15px;
+}
+
+.temp{
+    display: flex;
+}

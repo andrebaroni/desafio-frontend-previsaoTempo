@@ -49,41 +49,56 @@ class ShowData extends Component {
 
         return (
 
-            <div>
-                <input onKeyPress={onKeyPress} onChange={onChange} placeholder={placeholder}></input>
-                <button onClick={clearState}>Limpar</button>
+            <div className="content">
+                {/* <input onKeyPress={onKeyPress} onChange={onChange} placeholder={placeholder}></input> */}
+                {/* <button onClick={clearState}>Limpar</button> */}
                 <Card className={classes}>
                     <CardContent>
                         <p>{city}, {estado} - {country}</p>
                         <h2>Hoje: {tempMin[0]}° - {tempMax[0]}°</h2>
-                        <p>Min - Max</p>
+                        {/* <p>Min - Max</p> */}
 
-                        <div className="temp">
-                            <Typography>
+                        <table className="temp">
+                        <tr>
+                            <tr>
+                                <th>Min</th>
+                                <th>Max</th>
+                                <th>Data</th>
+                            </tr>
 
-                                {tempMin.map((inf, index) => {
-                                    return (<p>{tempMin[index]}° - </p>)
-                                })}
-                            </Typography> 
+                            
+                                <td>
 
-                            <Typography >
+                                    {tempMin.map((inf, index) => {
+                                        return (<tr>{tempMin[index]}°</tr>)
+                                    })}
+                                </td>
 
-                                {tempMax.map((inf, index) => {
-                                    return (<p> {tempMax[index]}° -- </p>)
-                                })}
+                                <td >
 
-                            </Typography>
+                                    {tempMax.map((inf, index) => {
+                                        return (<tr> {tempMax[index]}°</tr>)
+                                    })}
 
-                            <Typography>
+                                </td>
 
-                                {data.map((inf, index) => {
-                                    return (<p> {data[index]}</p>)
-                                })}
+                                <td>
 
-                            </Typography>
-                        </div>
+                                    {data.map((inf, index) => {
+                                        return (<tr> {data[index]}</tr>)
+                                    })}
 
-                        {console.log("informacoes: ", informacoes)}
+                                </td>
+                            </tr>
+                        </table>
+
+                    </CardContent>
+
+                </Card>
+
+                <Card>
+                    <CardContent>
+                        Capitais
                     </CardContent>
                 </Card>
             </div>

@@ -5,8 +5,17 @@
 
 .content{
     font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 600px;
+    justify-content: space-evenly;
 }
 
 .temp{
     display: flex;
+}
+
+.MuiPaper-root-2{
+    padding: 10px;
 }

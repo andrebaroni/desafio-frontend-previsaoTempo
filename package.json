@@ -5,7 +5,9 @@
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "antd": "^3.13.4",
+    "babel-loader": "^8.0.5",
     "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-moment": "^0.8.4",

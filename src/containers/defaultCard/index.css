@@ -1,0 +1,30 @@
+.display{
+    height: 110vh!important;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.day-name-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info{
+    display: flex;
+    height: 180px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ant-card{
+    height: 350px;
+    width: 390px;
+    margin: 25px;
+}
+
+.ant-card-body{
+    height: 260px;
+}

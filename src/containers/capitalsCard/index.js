@@ -30,37 +30,35 @@ const styles = {
 class ShowData extends Component {
 
     render() {
-        const { informacoes, capitalInfo, loading} = this.props
-
-        const tempMin = informacoes.map((inf, index) => {
-            const item = informacoes[index]
-            const temperatureMin = informacoes[index].temperature.min
-
-            return temperatureMin
-        })
-
-        const tempMax = informacoes.map((inf, index) => {
-            const temperatureMax = informacoes[index].temperature.max
-            return temperatureMax
-        })
-
-       
+        const { capitals } = this.props
 
         return (
-
             <div className="content">
-                
                 <Card>
                     <CardContent>
                         <h2>Capitais</h2>
-                        {capitalInfo && <Table capitalInfo={capitalInfo} />}     
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>Estado</th>
+                                    {/* <th></th> */}
+                                    <th>Min - Max</th>
+                                    {/* <th>Max</th> */}
+                                </tr>
+                                {capitals.map(city => (
+                                    <tr>
+                                        <td>{city.city}</td>
+                                        {/* <td></td> */}
+                                        <td><Icon type="arrow-down" className="iconDown" />{city.tempMin}° - <Icon type="arrow-up" className="iconUp" />{city.tempMax}°</td>
+                                    </tr>
+                                ))}
+                            </table>
+                        </div>
                     </CardContent>
                 </Card>
-                
             </div>
         )
     }
-
 }
 
 

@@ -4,7 +4,7 @@ import {Icon} from 'antd'
 
 class Table extends Component { 
   render(){
-    const capitalInfo = this.props.capitalInfo
+    const capitals = this.props.capitals
     return(
       <div>
           <table>
@@ -14,7 +14,7 @@ class Table extends Component {
               <th>Min - Max</th>
               {/* <th>Max</th> */}
             </tr>
-            {capitalInfo.map(city => (
+            {capitals.map(city => (
               <tr>
                 <td>{city.city}</td>
                 {/* <td></td> */}
